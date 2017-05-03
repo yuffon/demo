@@ -1,0 +1,14 @@
+hostfolder=/root/result
+callString=1
+refine=0
+times=-1
+period="0,5,0,0"
+resultFolder="/result"
+predictMode=0
+
+# running Jericho:  parameter 1 is the guiding flag(1 for guiding, 0 for not guiding); parameter 2 is the slicing flag(1 for slicing, 0 for not slicing)
+./docker_run ${hostfolder} TestJerichoParserWithSlicing ${callString} ${1} ${refine} ${times} ${period} ${resultFolder} ${2} ${predictMode} 
+
+
+
+

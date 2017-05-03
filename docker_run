@@ -1,0 +1,12 @@
+hostfolder=${1}
+program=${2}
+callString=${3}
+guided=${4}
+refine=${5}
+times=${6}
+period=${7}
+resultFolder=${8}
+slicing=${9}
+predictMode=${10}
+
+docker run -v ${hostfolder}:${resultFolder} jpf-jdart /bin/bash -c "/root/ftpstart && export PATH=/usr/local/apache-ant-1.9.6/bin:/usr/share/groovy/bin:$PATH && cd /home/jpf/jpf-jdart && ./runyu ${program} ${callString} ${guided} ${refine} ${times} ${period} ${resultFolder} ${slicing} ${predictMode}"
