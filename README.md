@@ -1,7 +1,8 @@
 # demo
+
 This project is about the demonstration of RGSE. 
 
-RGSE is a regular propety guided engine for finding program paths sastifying a regular property as soon as possible.
+RGSE is a regular propety guided dynamic symbolic execution (DSE) engine, which can quickly find the program paths satisfying a regular property.
 
 The file manuel.pdf introduces how to run the test scripts.
 
