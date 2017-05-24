@@ -8,7 +8,7 @@ RGSE is a regular property guided dynamic symbolic execution (DSE) engine for fi
 
 * [**Home**](https://jrgse.github.io/demo/)  
 
-* [**Tutorial**](https://jrgse.github.io)
+* [**Tutorial**]( https://jrgse.github.io/tutorial/)
 
 * [**Manuel**](https://github.com/jrgse/demo/raw/master/manuel.pdf)
 
