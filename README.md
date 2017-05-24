@@ -1,6 +1,6 @@
 RGSE
 ===============================================
-![alt text](https://raw.githubusercontent.com/jrgse/images/master/FSM.jpg)
+![rgse](https://raw.githubusercontent.com/jrgse/images/master/rgse.jpg)
 
 RGSE is a regular property guided dynamic symbolic execution (DSE) engine for finding the program paths satisfying a regular property. The technique implemented by RGSE was presented in [1].
 
@@ -17,11 +17,11 @@ RGSE is a regular property guided dynamic symbolic execution (DSE) engine for fi
 --------------
 
 # **Features**
-  * `Effectiveness`: RGSE can analyze real-world open source Java programs. 
+
+  * `Good usability`: RGSE can analyze real-world open source java programs with respect to not only single object property but also multiple objects properties. 
   
-  * `Efficiency`: RGSE can find the program paths satisfying a regular property as soon as possible through evaluating the history and future information of branches.
-  
-  * `Detailed statistics`: the iteration and time-consumption for finding the first accepted path, the accepted event sequence, the inputs that can trigger the accepted path, and so on.  
+  * `Effectiveness and efficiency`: RGSE can effectively find the program paths satisfying a regular property as soon as possible. Compare with DFS mode and pure path slicing mode, RGSE achieves an average 179x
+  and 130x time speedups, respectively. 
   
   * `Extensive applications`: typestate bug finding, path-oriented test case generation, performance tuning, and so on.    
 
