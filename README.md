@@ -1,6 +1,6 @@
 RGSE
-![alt text](https://raw.githubusercontent.com/jrgse/images/master/FSM.jpg)
 ===============================================
+![alt text](https://raw.githubusercontent.com/jrgse/images/master/FSM.jpg)
 
 RGSE is a regular property guided dynamic symbolic execution (DSE) engine for finding the program paths satisfying a regular property. The technique implemented by RGSE was presented in [1].
 
