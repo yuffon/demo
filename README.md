@@ -2,11 +2,11 @@ Demo of RGSE
 ===============================================
 * [**Home**](https://jrgse.github.io/demo/)  
 
-* [Tutorial](https://jrgse.github.io)
+* [**Tutorial**](https://jrgse.github.io)
 
-* [Manuel](https://github.com/jrgse/demo/raw/master/manuel.pdf)
+* [**Manuel**](https://github.com/jrgse/demo/raw/master/manuel.pdf)
 
-* [Docker Image](https://1drv.ms/u/s!Amd07GCbYt_zbQZm2w2MBbXI6Zo)
+* [**Docker Image**](https://1drv.ms/u/s!Amd07GCbYt_zbQZm2w2MBbXI6Zo)
 
 ![alt text](https://github.com/jrgse/images/blob/master/FSM.jpg) 
 
@@ -25,8 +25,8 @@ RGSE is a regular property guided dynamic symbolic execution (DSE) engine for fi
 
 ----------  
 # **Contacts**
-	*(1). Hengbiao Yu :* hengbiaoyu@nudt.edu.cn
-	*(2). Zhenbang Chen :* zbchen@nudt.edu.cn
+	(1). Hengbiao Yu : hengbiaoyu@nudt.edu.cn
+	(2). Zhenbang Chen : zbchen@nudt.edu.cn
 
 
 [1]. Yufeng Zhang, Zhenbang Chen, Ji Wang, Wei Dong, Zhiming Liu. Regular Property Guided Dynamic Symbolic Execution, in 37th IEEE/ACM International Conference on Software Engineering (ICSE 2015), IEEE Press, pp: 643-653. ([PDF](http://zbchen.github.io/Papers_files/icse2015.pdf))
