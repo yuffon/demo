@@ -1,0 +1,8 @@
+Primordial,Java,stdlib,none
+Primordial,Java,jarFile,primordial.jar.model
+Application,Java,binaryDir,build/example-rhino/test/rhino
+Application,Java,binaryDir,build/example-rhino/mozilla/classfile
+Application,Java,binaryDir,build/example-rhino/mozilla/javascript
+Application,Java,binaryDir,build/example-rhino/mozilla/javascript/regexp
+Application,Java,binaryDir,build/example-rhino/mozilla/javascript/tools
+Application,Java,binaryDir,build/example-rhino/mozilla/javascript/tools/shell
