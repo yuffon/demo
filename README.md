@@ -4,15 +4,9 @@ RGSE
 
 RGSE is a regular property guided dynamic symbolic execution (DSE) engine for finding the program paths satisfying a regular property. The technique implemented by RGSE was presented in [1].
 
------------------
+----------------- 
 
-* [**Home**](https://jrgse.github.io/)  
-
-* [**Tutorial**](https://jrgse.github.io/tutorial.html)
-
-* [**Manuel**](https://github.com/jrgse/demo/raw/master/manuel.pdf)
-
-* [**Docker Image**](https://1drv.ms/u/s!Amd07GCbYt_zbQZm2w2MBbXI6Zo)
+* [**Website of RGSE**](https://jrgse.github.io/)
 
 --------------
 
