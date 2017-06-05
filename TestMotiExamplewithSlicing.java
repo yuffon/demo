@@ -70,7 +70,7 @@ public class TestMotiExamplewithSlicing extends PropertyGuidedSEAbstractTest {
 	
 	public void setProperty() {
 
-		FiniteStateAutomaton dfa = getForwardFSAAntlr();
+		FiniteStateAutomaton dfa = getForwardFSA();
 		
 		MonitorWithDFA forwardMonitor = new MonitorWithDFA(dfa);
 			
@@ -115,17 +115,15 @@ public class TestMotiExamplewithSlicing extends PropertyGuidedSEAbstractTest {
 		PropertyAnalysis.property = new Property(forwardMonitor);
 	}
 	
-	public static FiniteStateAutomaton getForwardFSAAntlr() {
+	public static FiniteStateAutomaton getForwardFSA() {
 		//create a FSA
 		FiniteStateAutomaton nfa = new FiniteStateAutomaton();
 		State s0 = nfa.createState(new Point(0,0)); // inited
 		nfa.setInitialState(s0);
 		State s1 = nfa.createState(new Point(0,0)); // close
 		State s2 = nfa.createState(new Point(0,0)); // error
-		nfa.addFinalState(s2);
-		
+		nfa.addFinalState(s2);	
 		List<Transition> trans = new ArrayList<Transition>();
-		
 		trans.add(new FSATransition(s0, s0, "I"));
 		trans.add(new FSATransition(s0, s0, "R"));
 		trans.add(new FSATransition(s0, s1, "C"));
@@ -133,20 +131,14 @@ public class TestMotiExamplewithSlicing extends PropertyGuidedSEAbstractTest {
 		trans.add(new FSATransition(s1, s2, "R"));
 		trans.add(new FSATransition(s2, s2, "R"));
 		trans.add(new FSATransition(s2, s1, "C"));
-		
 		for(Transition t : trans) {
 			nfa.addTransition(t);
 		}
-		
-		//deterministic
-		NFAToDFA to = new NFAToDFA();
-		
+		NFAToDFA to = new NFAToDFA();	
 		FiniteStateAutomaton dfa = to.convertToDFA(nfa);
-		
 		Global.shortestPathLength.put(s0.getID(), 2);
 		Global.shortestPathLength.put(s1.getID(), 1);
 		Global.shortestPathLength.put(s2.getID(), 0);
-		
 		return dfa;
 	}
 

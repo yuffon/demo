@@ -108,7 +108,7 @@ public class TestRhinoWithSlicing extends PropertyGuidedSEAbstractTest{
 	@Override
 	public void setProperty() {
 		// now only construct a monitor by hand
-		FiniteStateAutomaton dfa = getForwardFSAAntlr();
+		FiniteStateAutomaton dfa = getForwardFSA();
 		
 		MonitorWithDFA forwardMonitor = new MonitorWithDFA(dfa);//com.alibaba.fastjson.parser
 		forwardMonitor.addSensitiveEvent("Ljava/util/Enumeration;", "hasMoreElements()Z");
@@ -121,10 +121,9 @@ public class TestRhinoWithSlicing extends PropertyGuidedSEAbstractTest{
 		PropertyAnalysis.property = new Property(forwardMonitor);
 	}
 	
-	public static FiniteStateAutomaton getForwardFSAAntlr() {
-		//create a FSA
+	public static FiniteStateAutomaton getForwardFSA() {
 		FiniteStateAutomaton nfa = new FiniteStateAutomaton();
-		State s0 = nfa.createState(new Point(0,0)); // start
+		State s0 = nfa.createState(new Point(0,0)); 
 		s0.setLabel("0");
 		nfa.setInitialState(s0);
 		State s1 = nfa.createState(new Point(0,0));
@@ -132,9 +131,7 @@ public class TestRhinoWithSlicing extends PropertyGuidedSEAbstractTest{
 		State s2 = nfa.createState(new Point(0,0));
 		s2.setLabel("2");
 		nfa.addFinalState(s2);
-
 		List<Transition> trans = new ArrayList<Transition>();
-		
 		trans.add(new FSATransition(s0, s2, "N")); // next
 		trans.add(new FSATransition(s0, s1, "H")); // hasnext
 		trans.add(new FSATransition(s1, s0, "N")); // next
@@ -145,16 +142,11 @@ public class TestRhinoWithSlicing extends PropertyGuidedSEAbstractTest{
 		for(Transition t : trans) {
 			nfa.addTransition(t);
 		}
-
-		//deterministic
-		NFAToDFA to = new NFAToDFA();
-				
-		FiniteStateAutomaton dfa = to.convertToDFA(nfa);
-				
+		NFAToDFA to = new NFAToDFA();		
+		FiniteStateAutomaton dfa = to.convertToDFA(nfa);	
 		Global.shortestPathLength.put(s0.getID(), 2);
 		Global.shortestPathLength.put(s1.getID(), 1);
-		Global.shortestPathLength.put(s2.getID(), 0);
-				
+		Global.shortestPathLength.put(s2.getID(), 0);	
 		return dfa;
 	}
 	
