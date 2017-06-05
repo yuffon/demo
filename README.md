@@ -12,7 +12,7 @@ RGSE is a regular property guided dynamic symbolic execution (DSE) engine for fi
 
 # **Features**
 
-  * `Good usability`: RGSE can analyze real-world open source java programs with respect to not only single object but also multiple objects involved properties. 
+  * `Good usability`: RGSE can analyze real-world open source Java programs with respect to not only single object but also multiple objects involved regular properties. 
   
   * `Effectiveness and efficiency`: RGSE can effectively find the program paths satisfying a regular property as soon as possible. 
   We applied RGSE to analyze 16 real-world open source Java programs against representative regular properties, compared with DFS 
